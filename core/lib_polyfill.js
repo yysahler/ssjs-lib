@@ -132,7 +132,7 @@
 
   /************************* ARRAY *************************/
 
-
+  /*Standard Array.filter method polyfill from MDN does not seem to work for SSJS. (It causes timeout and possible runaway script.) Replaced with a simplified version that is tested on cloud pages.*/
   Array.prototype.filter = function(fn) {
     var a = [];
     for (var i = 0; i < this.length; i++) {
